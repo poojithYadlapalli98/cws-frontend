@@ -1,0 +1,18 @@
+<script>
+
+var url="http://localhost:13899/user/register";
+var data= {
+    "username":"saik223223444",
+    "password": "saiar223223444",
+    "emailId":"saiku223223444@digital-lync.com"
+}
+var xhr = new XMLHttpRequest();
+xhr.open("POST", url, true);
+xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+xhr.onload = function () {
+    console.log("inside onload");
+	 console.log('data', xhr.responseText);
+}
+xhr.send(JSON.stringify(data));
+
+</script>
